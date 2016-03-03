@@ -151,6 +151,7 @@ net.ipv4.tcp_fack = 1
 // 该文件表示是否打开FACK拥塞避免和快速重传功能, 当tcp_sack 设置为0时, 这个值即使设置为1也无效
 
 net.ipv4.conf.all.accept_redirects = 0
+
 net.ipv4.conf.default.accept_redirects = 0
 
 // 如果主机所在的网段中有两个路由器，你将其中一个设置成了缺省网关，但是该网关在收到你的ip包时发现该ip包必须经过另外一个路由器，这时这个路由器就会给你发一个所谓的“重定向”icmp包，告诉将ip包转发到另外一个路由器。参数值为布尔值，1表示接收这类重定向icmp 信息，0表示忽略。在充当路由器的linux主机上缺省值为0，在一般的linux主机上缺省值为1。建议将其改为0以消除安全性隐患
@@ -240,12 +241,19 @@ net.ipv4.tcp_max_tw_buckets = 20000
 
 # arp 篇
 net.ipv4.neigh.default.gc_thresh3 = 2048
+
 net.ipv4.neigh.default.gc_thresh2 = 1024
+
 net.ipv4.neigh.default.gc_thresh1 = 128
+
 net.ipv4.neigh.default.gc_interval = 120
+
 net.ipv4.neigh.default.proxy_qlen = 96
+
 net.ipv4.neigh.default.unres_qlen = 6
+
 net.ipv4.route.flush = 1
+
 net.ipv4.rt_cache_rebuild_count = -1
 
 // 如果系统内核打印Ｎeighbour table overflow, 然后查看本机arp 缓存列表条数　arp -an ｜wc -l
@@ -254,9 +262,13 @@ net.ipv4.rt_cache_rebuild_count = -1
 # 链路跟踪表设置
 
 net.ipv4.netfilter.ip_conntrack_max = 10000000
+
 net.ipv4.netfilter.ip_conntrack_tcp_timeout_established = 360
+
 net.ipv4.netfilter.ip_conntrack_tcp_timeout_fin_wait = 60
+
 net.ipv4.netfilter.ip_conntrack_tcp_timeout_syn_recv = 13
+
 net.ipv4.netfilter.ip_conntrack_tcp_timeout_time_wait = 60
 
 // 链路跟踪表作用和影响
