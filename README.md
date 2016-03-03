@@ -161,7 +161,9 @@ net.ipv4.conf.all.secure_redirects = 0
 // 其实所谓的“安全重定向”就是只接受来自网关的“重定向”icmp包。该参数就是用来设置“安全重定向”功能的。参数值为布尔值，1表示启用，0表示禁止，缺省值为启用。
 
 net.ipv4.tcp_rfc1337 = 1
+
 net.ipv4.tcp_congestion_control = cubic
+
 net.ipv4.tcp_ecn = 2
 
 // 该文件表示是否打开TCP的直接拥塞通告功能。
@@ -211,8 +213,11 @@ Default：为TCP socket预留用于接收缓冲的内存数量，默认情况下
 Max：为TCP socket预留用于接收缓冲的内存最大值。该值不会影响 net.core.wmem中max的值，今天选择参数 SO_SNDBUF则不受该值影响。
 
 net.core.rmem_default = 131072
+
 net.core.rmem_max = 16777216
+
 net.ipv4.tcp_wmem = 8192 131072 16777216
+
 net.core.wmem_default = 131072
 
 // 该文件包含3个整数值，分别是：min，default，max
